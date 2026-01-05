@@ -1,11 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const { t } = useLanguage();
   
+  // 1. Creamos la referencia al formulario
+  const form = useRef();
+
+  // 2. Actualizamos el estado inicial con los nombres que usa EmailJS
   const [formData, setFormData] = useState({
-    firstName: '', lastName: '', email: '', phone: '', projectType: '', message: '', consent: false
+    user_name: '', 
+    user_lastname: '', 
+    user_email: '', 
+    phone: '', 
+    project_type: '', 
+    message: '', 
+    consent: false
   });
 
   const [status, setStatus] = useState('idle');
@@ -22,14 +33,29 @@ const ContactForm = () => {
     e.preventDefault();
     setStatus('loading');
 
-    // Simular envío
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({
-        firstName: '', lastName: '', email: '', phone: '', projectType: '', message: '', consent: false
-      });
-      setTimeout(() => setStatus('idle'), 5000);
-    }, 2000);
+    // 3. Envío real con tus credenciales
+    emailjs.sendForm(
+      'service_08bw8g9',       // ✅ Tu Service ID
+      'template_pmfs9oo',      // ✅ Tu Template ID
+      form.current,
+      'yUkgDB_IkVKeu-O1Q'      // ✅ Tu Public Key
+    )
+    .then((result) => {
+        console.log("Enviado:", result.text);
+        setStatus('success');
+        
+        // Limpiar formulario
+        setFormData({
+            user_name: '', user_lastname: '', user_email: '', phone: '', project_type: '', message: '', consent: false
+        });
+        
+        // Quitar mensaje de éxito a los 5 segundos
+        setTimeout(() => setStatus('idle'), 5000);
+    }, (error) => {
+        console.log("Error:", error.text);
+        alert("Hubo un error al enviar el mensaje. Por favor intenta más tarde.");
+        setStatus('idle');
+    });
   };
 
   return (
@@ -42,32 +68,38 @@ const ContactForm = () => {
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        {/* Conectamos la referencia 'ref={form}' */}
+        <form ref={form} onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                     <label className="block text-sm font-semibold mb-2">{t('label_name')} *</label>
-                    <input type="text" name="firstName" required className="form-input" value={formData.firstName} onChange={handleChange} />
+                    {/* name="user_name" para coincidir con la plantilla */}
+                    <input type="text" name="user_name" required className="form-input" value={formData.user_name} onChange={handleChange} />
                 </div>
                 <div>
                     <label className="block text-sm font-semibold mb-2">{t('label_lastname')} *</label>
-                    <input type="text" name="lastName" required className="form-input" value={formData.lastName} onChange={handleChange} />
+                    {/* name="user_lastname" */}
+                    <input type="text" name="user_lastname" required className="form-input" value={formData.user_lastname} onChange={handleChange} />
                 </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                     <label className="block text-sm font-semibold mb-2">{t('label_email')} *</label>
-                    <input type="email" name="email" required className="form-input" value={formData.email} onChange={handleChange} />
+                    {/* name="user_email" */}
+                    <input type="email" name="user_email" required className="form-input" value={formData.user_email} onChange={handleChange} />
                 </div>
                 <div>
                     <label className="block text-sm font-semibold mb-2">{t('label_phone')} *</label>
+                    {/* name="phone" */}
                     <input type="tel" name="phone" required className="form-input" value={formData.phone} onChange={handleChange} />
                 </div>
             </div>
 
             <div>
                 <label className="block text-sm font-semibold mb-2">{t('label_project_type')}</label>
-                <select name="projectType" className="form-input" value={formData.projectType} onChange={handleChange}>
+                {/* name="project_type" */}
+                <select name="project_type" className="form-input" value={formData.project_type} onChange={handleChange}>
                     <option value="">---</option>
                     <option value="construccion">Construcción General</option>
                     <option value="vial">Infraestructura Vial</option>

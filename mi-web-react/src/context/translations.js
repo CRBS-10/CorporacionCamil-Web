@@ -16,22 +16,45 @@ export const translations = {
     btn_quote: "Solicitar Cotización",
     btn_view_projects: "Ver Nuestros Proyectos",
     home_services_title: "Nuestros Servicios",
+    title_projects: "Proyectos Destacados",
     home_services_desc: "Ofrecemos soluciones completas en infraestructura e ingeniería.",
     btn_learn_more: "Saber Más →",
     
     // --- About Page ---
-    about_title: "Acerca de Corporación CAMIL",
-    about_desc: "Líderes en construcción e infraestructura con más de 15 años de experiencia.",
-    our_history: "Nuestra Historia",
-    our_history_text: "Corporación CAMIL se estableció como una empresa comprometida con la excelencia...",
-    our_values: "Nuestros Valores",
-    val_quality: "Excelencia en Calidad",
+   // --- ABOUT PAGE (Nosotros) ---
+    about_title: "Experiencia, Ética y Vanguardia",
+    about_desc: "Corporación Camil se ha consolidado como un referente en la industria de la construcción, combinando tecnología de punta con un capital humano altamente calificado para transformar el paisaje de El Salvador.",
+    
+    // Historia
+    our_history: "Nuestra Trayectoria",
+    our_history_text: "Corporación Camil S.A. de C.V. se conformó el 30 de mayo de 2008 con un objetivo claro: proporcionar un servicio altamente competitivo y eficiente en la industria de la construcción. A lo largo de estos años, nos hemos especializado en la ejecución de obras tanto para la Iniciativa Privada como Pública, cimentando nuestro crecimiento en la ética profesional.",
+    our_history_text_2: "Nuestra filosofía se basa en satisfacer las necesidades del cliente mediante procesos controlados y una mejora continua. No solo construimos infraestructuras; construimos relaciones de confianza a largo plazo, garantizando el cumplimiento en tiempo, calidad y respeto por el medio ambiente.",
+    
+    // Valores (Adaptados a tu diseño de 3 columnas)
+    our_values: "Valores Corporativos",
+    our_values_subtitle: "Los pilares que sostienen cada obra y definen nuestra identidad empresarial.",
+    
+    // Valor 1: Calidad + Servicio
+    val_quality: "Calidad y Servicio",
+    val_quality_desc: "Superamos las expectativas del cliente usando los mejores materiales y tecnología, cumpliendo siempre en tiempo y forma.",
+    
+    // Valor 2: Integridad + Honestidad + Confianza
     val_integrity: "Integridad y Confianza",
-    val_innovation: "Innovación",
+    val_integrity_desc: "Actuamos con total transparencia, confidencialidad y ética profesional. Asumimos nuestros compromisos con seriedad y responsabilidad absoluta.",
+    
+    // Valor 3: Innovación + Trabajo en Equipo
+    val_innovation: "Innovación y Desarrollo",
+    val_innovation_desc: "Nos mantenemos a la vanguardia en nuevas tecnologías de construcción, fomentando la capacitación constante y el trabajo en equipo.",
+
+    // Botones About
+    btn_quote: "Solicitar Cotización",
+    btn_view_projects: "Ver Nuestro Portafolio",
+
+    // Estadísticas
     stats_projects: "Proyectos",
-    stats_years: "Años Exp.",
-    stats_team: "Equipo",
-    stats_satisfaction: "Satisfacción",
+    stats_years: "Años Exp.", 
+    stats_team: "Profesionales",
+    stats_satisfaction: "Calidad",
 
     // --- Contact Page ---
     contact_title: "Contáctenos",
@@ -52,13 +75,19 @@ export const translations = {
     info_email_label: "Email:",
     info_hours_label: "Horario:",
     info_hours_value: "Lun - Vie: 8:00 AM - 5:00 PM",
-    
+    btn_whatsapp: "Chat en WhatsApp",
     emergency_title: "¿Emergencia?",
     emergency_desc: "Para situaciones críticas de infraestructura.",
     emergency_call: "Llamar:",
     
     // --- Footer ---
-    footer_rights: "© 2025 Corporación CAMIL. Todos los Derechos Reservados."
+    footer_rights: "© 2025 Corporación CAMIL. Todos los Derechos Reservados.",
+    footer_desc: "Soluciones integrales en construcción e ingeniería para El Salvador.",
+    footer_links: "Enlaces Rápidos",
+    footer_contact: "Contacto",
+    footer_follow: "Síguenos",
+    footer_rights: "Todos los derechos reservados.",
+    footer_privacy: "Política de Privacidad"
   },
   en: {
     // --- Navbar ---
@@ -75,22 +104,45 @@ export const translations = {
     btn_quote: "Get a Quote",
     btn_view_projects: "View Our Projects",
     home_services_title: "Our Services",
+    title_projects: "Featured Projects",
     home_services_desc: "We offer complete infrastructure and engineering solutions.",
     btn_learn_more: "Learn More →",
 
     // --- About Page ---
-    about_title: "About Corporación CAMIL",
-    about_desc: "Leaders in construction and infrastructure with over 15 years of experience.",
-    our_history: "Our History",
-    our_history_text: "Corporación CAMIL was established as a company committed to excellence...",
-    our_values: "Our Values",
-    val_quality: "Quality Excellence",
+   // --- ABOUT PAGE (About Us) ---
+    about_title: "Experience, Ethics, and Avant-Garde",
+    about_desc: "Corporación Camil has established itself as a benchmark in the construction industry, combining cutting-edge technology with highly qualified human capital to transform El Salvador's landscape.",
+    
+    // History
+    our_history: "Our Trajectory",
+    our_history_text: "Corporación Camil S.A. de C.V. was established on May 30, 2008, with a clear objective: to provide a highly competitive and efficient service in the construction industry. Throughout these years, we have specialized in executing works for both the Private and Public Sectors, grounding our growth in professional ethics.",
+    our_history_text_2: "Our philosophy is based on satisfying client needs through controlled processes and continuous improvement. We don't just build infrastructure; we build long-term relationships of trust, ensuring compliance with time, quality, and respect for the environment.",
+    
+    // Values
+    our_values: "Corporate Values",
+    our_values_subtitle: "The pillars that support every project and define our corporate identity.",
+    
+    // Value 1
+    val_quality: "Quality & Service",
+    val_quality_desc: "We exceed client expectations using the best materials and technology, always delivering on time and in proper form.",
+    
+    // Value 2
     val_integrity: "Integrity & Trust",
-    val_innovation: "Innovation",
+    val_integrity_desc: "We act with total transparency, confidentiality, and professional ethics. We assume our commitments with seriousness and absolute responsibility.",
+    
+    // Value 3
+    val_innovation: "Innovation & Development",
+    val_innovation_desc: "We stay at the forefront of new construction technologies, fostering constant training and teamwork.",
+
+    // Buttons About
+    btn_quote: "Request a Quote",
+    btn_view_projects: "View Our Portfolio",
+
+    // Stats
     stats_projects: "Projects",
     stats_years: "Years Exp.",
-    stats_team: "Team",
-    stats_satisfaction: "Satisfaction",
+    stats_team: "Professionals",
+    stats_satisfaction: "Quality",
 
     // --- Contact Page ---
     contact_title: "Contact Us",
@@ -111,12 +163,18 @@ export const translations = {
     info_email_label: "Email:",
     info_hours_label: "Hours:",
     info_hours_value: "Mon - Fri: 8:00 AM - 5:00 PM",
-    
+    btn_whatsapp: "Chat on WhatsApp",
     emergency_title: "Emergency?",
     emergency_desc: "For critical infrastructure situations.",
     emergency_call: "Call:",
 
     // --- Footer ---
-    footer_rights: "© 2025 Corporación CAMIL. All Rights Reserved."
+    footer_rights: "© 2025 Corporación CAMIL. All Rights Reserved.",
+    footer_desc: "Comprehensive construction and engineering solutions for El Salvador.",
+    footer_links: "Quick Links",
+    footer_contact: "Contact Us",
+    footer_follow: "Follow Us",
+    footer_rights: "All Rights Reserved.",
+    footer_privacy: "Privacy Policy"
   }
 };

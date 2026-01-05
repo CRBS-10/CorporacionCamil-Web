@@ -1,18 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useLanguage } from "../../context/LanguageContext";
+import emailjs from '@emailjs/browser';
 
 const ServiceForm = ({ activeData, currentTheme }) => {
   const { language } = useLanguage();
   const [formStatus, setFormStatus] = useState('idle');
+  
+  // Referencia al formulario
+  const form = useRef();
 
   const handleServiceContact = (e) => {
     e.preventDefault();
     setFormStatus('sending');
-    setTimeout(() => {
-      setFormStatus('success');
-      e.target.reset();
-      setTimeout(() => setFormStatus('idle'), 3000);
-    }, 2000);
+
+    emailjs.sendForm(
+      'service_08bw8g9',       // Tu Service ID
+      'template_pmfs9oo',      // Tu Template ID
+      form.current,
+      'yUkgDB_IkVKeu-O1Q'      // Tu Public Key
+    )
+    .then((result) => {
+        setFormStatus('success');
+        e.target.reset();
+        setTimeout(() => setFormStatus('idle'), 3000);
+    }, (error) => {
+        alert("Error al enviar solicitud.");
+        setFormStatus('idle');
+    });
   };
 
   return (
@@ -21,8 +35,12 @@ const ServiceForm = ({ activeData, currentTheme }) => {
              <h3 className="text-xl font-bold text-gray-900">
                 {language === 'es' ? 'Solicitar Cotización' : 'Request Quote'}
              </h3>
+             {/* CORRECCIÓN DE ESPACIO Y TEXTO */}
              <p className="text-gray-500 text-sm mt-1">
-                {language === 'es' ? 'Para proyectos de' : 'For projects of'} <span className={`font-semibold ${currentTheme.main}`}>{activeData.title}</span>
+                {language === 'es' ? 'Para proyectos de ' : 'For projects of '} 
+                <span className={`font-semibold ${currentTheme.main}`}>
+                    {activeData.title}
+                </span>
              </p>
          </div>
 
@@ -32,15 +50,31 @@ const ServiceForm = ({ activeData, currentTheme }) => {
                  <p className="font-bold">{language === 'es' ? 'Mensaje Enviado' : 'Message Sent'}</p>
              </div>
          ) : (
-            <form onSubmit={handleServiceContact} className="space-y-4">
+            <form ref={form} onSubmit={handleServiceContact} className="space-y-4">
+                
+                {/* CAMPO OCULTO: Simplificado para evitar redundancia */}
+                {/* Ahora en el correo, donde dice "Nombre", saldrá solo el nombre del servicio */}
+                <input type="hidden" name="user_name" value={activeData.title} />
+                <input type="hidden" name="user_lastname" value="-" />
+
                 <div className="space-y-1">
                     <label className="text-xs font-bold text-gray-400 uppercase">Email</label>
-                    <input type="email" required className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:bg-white focus:ring-2 focus:ring-opacity-50 outline-none transition" />
+                    <input 
+                        type="email" 
+                        name="user_email"
+                        required 
+                        className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:bg-white focus:ring-2 focus:ring-opacity-50 outline-none transition" 
+                    />
                 </div>
                 
                 <div className="space-y-1">
                     <label className="text-xs font-bold text-gray-400 uppercase">{language === 'es' ? 'Detalles' : 'Details'}</label>
-                    <textarea rows="4" required className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:bg-white focus:ring-2 focus:ring-opacity-50 outline-none transition resize-none"></textarea>
+                    <textarea 
+                        rows="4" 
+                        name="message"
+                        required 
+                        className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 focus:bg-white focus:ring-2 focus:ring-opacity-50 outline-none transition resize-none"
+                    ></textarea>
                 </div>
                 
                 <button 

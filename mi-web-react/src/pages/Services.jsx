@@ -1,20 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom'; // 1. Importar useLocation
 import { useLanguage } from '../context/LanguageContext';
-// Ruta corregida para buscar los datos
 import { serviceThemes, servicesDataEs, servicesDataEn } from '../data/services';
 
-// Rutas corregidas para buscar los componentes en src/components/Service/
 import ServiceHero from '../components/Service/ServiceHero';
 import ServiceTabs from '../components/Service/ServiceTabs';
 import ServiceDetails from '../components/Service/ServiceDetails';
 import ServiceForm from '../components/Service/ServiceForm';
 
 const Services = () => {
+  // 2. Obtener la ubicación (donde viene el 'state')
+  const location = useLocation();
+  
   const [activeTab, setActiveTab] = useState('construccion');
   const { language } = useLanguage();
 
+  // 3. Efecto para leer la categoría entrante
+  useEffect(() => {
+    // Si hay un estado y tiene categoría (ej: "vial"), cambiamos el tab
+    if (location.state && location.state.category) {
+      setActiveTab(location.state.category);
+      // Opcional: Hacer scroll hacia arriba para que se vea el Hero
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+
   // Seleccionar datos según idioma
   const servicesData = language === 'es' ? servicesDataEs : servicesDataEn;
+  // Aseguramos que si activeTab falla, regrese a construccion
   const activeData = servicesData[activeTab] || servicesData.construccion;
   
   // Seleccionar tema de color

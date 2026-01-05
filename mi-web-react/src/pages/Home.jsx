@@ -10,7 +10,7 @@ import HomeServices from '../components/Home/HomeServices';
 import HomeProjects from '../components/Home/HomeProjects';
 import HomeAbout from '../components/Home/HomeAbout';
 import HomeContact from '../components/Home/HomeContact';
-import FloatingButton from '../components/Home/FloatingButton';
+
 
 const Home = () => {
   return (
@@ -20,7 +20,7 @@ const Home = () => {
       <HomeProjects />
       <HomeAbout />
       <HomeContact />
-      <FloatingButton />
+     
     </div>
   );
 };
