@@ -102,14 +102,14 @@ const HomeContact = () => {
                               <svg className="w-6 h-6 text-primary mt-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/></svg>
                               <div>
                                   <h4 className="font-bold">{t('info_address_label')}</h4>
-                                  <p className="text-gray-600">San Salvador, El Salvador</p>
+                                  <p className="text-gray-600">MRM6+4J5 CAMIL S.A. DE C.V, San Salvador</p>
                               </div>
                           </div>
                           <div className="flex items-start space-x-3">
                               <svg className="w-6 h-6 text-primary mt-1" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
                               <div>
                                   <h4 className="font-bold">{t('info_email_label')}</h4>
-                                  <p className="text-gray-600">info@corporacioncamil.com</p>
+                                  <p className="text-gray-600">ffcorporacioncamil@gmail.com</p>
                               </div>
                           </div>
                       </div>
@@ -125,7 +125,7 @@ const HomeContact = () => {
                         scrolling="no" 
                         marginHeight="0" 
                         marginWidth="0" 
-                        src="https://maps.google.com/maps?q=San+Salvador,El+Salvador&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242.28677864915647!2d-89.18868337457121!3d13.682770445857763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6331006c3ac8b9%3A0xbe7f18b061861f4d!2sCAMIL%20S.A.%20DE%20C.V!5e0!3m2!1ses!2ssv!4v1768216174053!5m2!1ses!2ssv"
                         className="w-full h-full"
                       ></iframe>
                   </div>

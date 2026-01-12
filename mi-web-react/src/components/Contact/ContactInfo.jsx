@@ -20,11 +20,11 @@ const ContactInfo = () => {
                 <p>
                     {/* Antes: <strong>Dirección:</strong> */}
                     <strong className="text-text-primary">{t.info_address_label} </strong> 
-                    San Salvador, El Salvador
+                    MRM6+4J5 CAMIL S.A. DE C.V, San Salvador
                 </p>
                 <p>
                     <strong className="text-text-primary">{t.info_email_label} </strong> 
-                    info@corporacioncamil.com
+                    ffcorporacioncamil@gmail.com
                 </p>
                 <p>
                     <strong className="text-text-primary">{t.info_hours_label} </strong> 
@@ -38,9 +38,7 @@ const ContactInfo = () => {
             {/* Antes: <h3>¿Emergencia?</h3> */}
             <h3 className="text-xl font-bold text-error mb-2">{t.emergency_title}</h3>
             <p className="text-text-secondary mb-4">{t.emergency_desc}</p>
-            <a href="tel:+50377779999" className="font-bold text-error hover:underline text-lg">
-                {t.emergency_call} (503) 7777-9999
-            </a>
+            <p className="font-bold text-error text-lg">{t.emergency_call} (503) 2121-3952</p>
         </div>
 
         {/* Mapa */}
@@ -49,7 +47,7 @@ const ContactInfo = () => {
               title="Mapa"
               className="absolute inset-0 w-full h-full border-0"
               loading="lazy"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.1!2d-89.2!3d13.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDQyJzAwLjAiTiA4OcKwMTInMDAuMCJX!5e0!3m2!1ses!2ssv!4v1600000000000!5m2!1ses!2ssv"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242.28677864915647!2d-89.18868337457121!3d13.682770445857763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6331006c3ac8b9%3A0xbe7f18b061861f4d!2sCAMIL%20S.A.%20DE%20C.V!5e0!3m2!1ses!2ssv!4v1768216174053!5m2!1ses!2ssv"
             ></iframe>
         </div>
     </div>
