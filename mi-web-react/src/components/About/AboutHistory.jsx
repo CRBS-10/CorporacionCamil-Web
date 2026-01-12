@@ -41,7 +41,7 @@ const AboutHistory = () => {
                   <div className="absolute -top-4 -left-4 w-full h-full bg-white rounded-lg shadow-sm border border-orange-100 -z-10"></div>
                   
                   <img 
-                    src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                    src="/Images/Estetica/Equipo de trabajo/E2.jpg" 
                     alt="Equipo trabajando" 
                     className="w-full h-96 object-cover rounded-lg shadow-lg" 
                     onError={(e) => {e.target.src = 'https://via.placeholder.com/800x600'}}

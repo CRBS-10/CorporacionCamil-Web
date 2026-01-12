@@ -50,7 +50,7 @@ export const projectsDataEs = [
         "/Images/Electrico/panel de control/PN3.JPG"
       ],
       description: "Instalación y configuración de paneles eléctricos de control.",
-      date: "2024",
+      date: "2012",
       timeline: { "Planificación": "2 semanas", "Ejecución": "1 mes", "Cierre": "1 semana" }
     },
     {
@@ -89,7 +89,7 @@ export const projectsDataEs = [
         "/Images/Hidraulico/Pozo/Pozo-3.JPG"
       ],
       description: "Obra hidráulica: excavación y habilitación de pozo con caseta técnica.",
-      date: "2024",
+      date: "2012",
       timeline: { "Planificación": "2 semanas", "Ejecución": "1 mes", "Cierre": "1 semana" }
     },
     {
@@ -203,7 +203,7 @@ export const projectsDataEn = [
       category: "Electrical",
       images: projectsDataEs[3].images,
       description: "Installation and configuration of electrical control panels.",
-      date: "2024",
+      date: "2012",
       timeline: { "Planning": "2 weeks", "Execution": "1 month", "Closing": "1 week" }
     },
     {
@@ -230,7 +230,7 @@ export const projectsDataEn = [
       category: "Hydraulic",
       images: projectsDataEs[6].images,
       description: "Hydraulic work: excavation and enablement of well with technical booth.",
-      date: "2024",
+      date: "2012",
       timeline: { "Planning": "2 weeks", "Execution": "1 month", "Closing": "1 week" }
     },
     {

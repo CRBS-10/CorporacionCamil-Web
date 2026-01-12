@@ -22,7 +22,7 @@ export const servicesDataEs = {
     id: 'construccion',
     title: "Construcción General",
     description: "Ejecución integral de obras civiles, edificaciones comerciales y residenciales llave en mano.",
-    image: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    image: "/Images/Estetica/Pictures/ESTE1.jpg",
     overview: "En Corporación Camil, transformamos planos en realidad. Nos especializamos en la gestión completa de proyectos de construcción, desde la terracería inicial hasta los acabados finales de alta gama. Nuestra experiencia abarca edificios corporativos, complejos residenciales y naves industriales, asegurando siempre el cumplimiento de normas estructurales y cronogramas exigentes.",
     highlights: [
       "Edificaciones Verticales y Corporativas", 
@@ -36,7 +36,7 @@ export const servicesDataEs = {
     id: 'hidraulica',
     title: "Infraestructura Hidráulica",
     description: "Soluciones de ingeniería avanzada para la captación, distribución y tratamiento del agua.",
-    image: "https://images.pexels.com/photos/2510067/pexels-photo-2510067.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    image: "/Images/Estetica/Equipo de trabajo/tubos.jpg",
     overview: "El manejo eficiente del agua es vital. Ofrecemos soluciones integrales que van desde la perforación técnica de pozos profundos hasta la instalación de complejos sistemas de bombeo y redes de distribución. Además, diseñamos y construimos plantas de tratamiento y sistemas de drenaje pluvial para garantizar la sostenibilidad y salubridad de su proyecto.",
     highlights: [
       "Perforación y Equipamiento de Pozos", 
@@ -64,7 +64,7 @@ export const servicesDataEs = {
     id: 'vial',
     title: "Infraestructura Vial",
     description: "Ingeniería de caminos, pavimentación y urbanización con maquinaria pesada.",
-    image: "https://images.pexels.com/photos/2409681/pexels-photo-2409681.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    image: "/Images/Estetica/Equipo de trabajo/calle.jpg",
     overview: "Conectamos el desarrollo. Ejecutamos proyectos de infraestructura vial duradera, utilizando técnicas modernas de mecánica de suelos, estabilización y pavimentación. Ya sea concreto hidráulico para alto tráfico o mezcla asfáltica para carreteras, nuestra maquinaria y experiencia garantizan superficies seguras y resistentes a las inclemencias del tiempo.",
     highlights: [
       "Pavimentación en Concreto y Asfalto", 
@@ -82,7 +82,7 @@ export const servicesDataEn = {
     id: 'construccion',
     title: "General Construction",
     description: "Comprehensive execution of civil works, commercial buildings, and turnkey residential projects.",
-    image: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    image: "/Images/Estetica/Pictures/ESTE1.jpg",
     overview: "At Corporación Camil, we turn blueprints into reality. We specialize in complete construction project management, from initial earthworks to high-end final finishes. Our experience covers corporate buildings, residential complexes, and industrial warehouses, always ensuring compliance with structural standards and demanding schedules.",
     highlights: [
       "Vertical & Corporate Buildings", 
@@ -96,7 +96,7 @@ export const servicesDataEn = {
     id: 'hidraulica',
     title: "Hydraulic Infrastructure",
     description: "Advanced engineering solutions for water catchment, distribution, and treatment.",
-    image: "https://images.pexels.com/photos/2510067/pexels-photo-2510067.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    image: "/Images/Estetica/Equipo de trabajo/tubos.jpg",
     overview: "Efficient water management is vital. We offer comprehensive solutions ranging from technical deep well drilling to the installation of complex pumping systems and distribution networks. Additionally, we design and build treatment plants and storm drainage systems to ensure the sustainability and sanitation of your project.",
     highlights: [
       "Deep Well Drilling & Equipping", 
@@ -124,7 +124,7 @@ export const servicesDataEn = {
     id: 'vial',
     title: "Road Infrastructure",
     description: "Road engineering, paving, and urbanization using heavy machinery.",
-    image: "https://images.pexels.com/photos/2409681/pexels-photo-2409681.jpeg?auto=compress&cs=tinysrgb&w=1920",
+    image: "/Images/Estetica/Equipo de trabajo/calle.jpg",
     overview: "Connecting development. We execute durable road infrastructure projects using modern soil mechanics, stabilization, and paving techniques. Whether it's hydraulic concrete for heavy traffic or asphalt mix for highways, our machinery and experience guarantee safe surfaces resistant to weather conditions.",
     highlights: [
       "Hydraulic Concrete & Asphalt Paving", 
