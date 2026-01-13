@@ -16,7 +16,7 @@ const ContactHero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 // ⚠️ RECUERDA: Verifica que tu número sea el correcto aquí abajo
-                href="https://wa.me/50322223333?text=Hola%20Corporación%20Camil,%20quisiera%20más%20información." 
+                href="https://wa.me/50372311745?text=Hola%20Corporación%20Camil,%20quisiera%20más%20información." 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn-secondary flex items-center justify-center gap-2 px-8 py-3 bg-green-600 hover:bg-green-700 text-white border-none shadow-lg hover:-translate-y-1 transition-all"
